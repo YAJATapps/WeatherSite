@@ -9,17 +9,20 @@ class Wind extends React.Component {
 
         this.state = {
             degrees: '',
-            speed: ''
+            speed: '',
+            humidity: '',
+            pressure: ''
         };
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.data !== prevProps.data) {
             if (this.props.data.name !== undefined) {
-                let data = this.props.data;
                 this.setState({
-                    degrees: data.wind.deg,
-                    speed: data.wind.speed
+                    degrees: this.props.data.wind.deg,
+                    speed: this.props.data.wind.speed,
+                    humidity: this.props.data.main.humidity,
+                    pressure: this.props.data.main.pressure
                 });
             }
         }
@@ -29,8 +32,10 @@ class Wind extends React.Component {
         return (
             <div className='round-box' id='wind'>
                 <h1 className='box-header'>Wind</h1>
-                <h2 className='box-content' id='wind-degrees'>Direction: {this.state.degrees}&deg;</h2>
-                <h2 className='box-content' id='wind-speed'>Speed: {this.state.speed} meter/sec</h2>
+                <h2 className='box-content'>Direction: {this.state.degrees}&deg;</h2>
+                <h2 className='box-content'>Speed: {this.state.speed} meter/sec</h2>
+                <h2 className='box-content'>Humidity: {this.state.humidity}%</h2>
+                <h2 className='box-content'>Pressure: {this.state.pressure}mb</h2>
             </div>
         );
     }
