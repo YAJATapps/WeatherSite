@@ -4,6 +4,7 @@ import './App.css';
 import Air from './Air';
 import City from './City';
 import Wind from './Wind';
+import Utils from './Utils';
 
 class App extends React.Component {
 
@@ -18,10 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let hash = 'OTk0OTczYzRjM2Y5MWU3NTFmMDVkZDY1MDUxMGZkMWQ=';
-    let key = atob(hash);
-
-    let url = 'https://api.openweathermap.org/data/2.5/weather?id=5989045&units=metric&appid=' + key;
+    let url = 'https://api.openweathermap.org/data/2.5/weather?id=5989045&units=metric&appid=' + Utils.apiKey();
 
     fetch(url).then(res => res.json()).then((result) => {
       this.setState({

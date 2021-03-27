@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './Air.css';
+import Utils from './Utils';
 
 class Air extends React.Component {
 
@@ -22,10 +23,7 @@ class Air extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.lat !== prevProps.lat) {
-            let hash = 'OTk0OTczYzRjM2Y5MWU3NTFmMDVkZDY1MDUxMGZkMWQ=';
-            let key = atob(hash);
-
-            let url = 'http://api.openweathermap.org/data/2.5/air_pollution?lat=' + this.props.lat + '&lon=' + this.props.lon + '&appid=' + key;
+            let url = 'http://api.openweathermap.org/data/2.5/air_pollution?lat=' + this.props.lat + '&lon=' + this.props.lon + '&appid=' + Utils.apiKey();
 
             fetch(url).then(res => res.json()).then((result) => {
                 this.setState({
