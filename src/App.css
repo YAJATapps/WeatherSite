@@ -31,8 +31,19 @@
 
 .App-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 5vh;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+.App-child {
+    flex: 1 0 40%;
+    width: calc(40vw - 80px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 @keyframes App-logo-spin {

@@ -30,7 +30,7 @@ class Wind extends React.Component {
 
     render() {
         return (
-            <div className='round-box' id='wind'>
+            <div className='App-child round-box' id='wind'>
                 <h1 className='box-header'>Wind</h1>
                 <h2 className='box-content'>Direction: {this.state.degrees}&deg;</h2>
                 <h2 className='box-content'>Speed: {this.state.speed} meter/sec</h2>

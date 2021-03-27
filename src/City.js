@@ -34,7 +34,7 @@ class City extends React.Component {
 
     render() {
         return (
-            <div className='round-box' id='city' >
+            <div className='App-child round-box' id='city' >
                 <h1 className='box-header'>Weather</h1>
                 <h2 className='box-content'>City: {this.state.name}</h2>
                 <h2 className='box-content'>Temperature:  {this.state.temp}&deg;C</h2>

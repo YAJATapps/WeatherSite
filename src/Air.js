@@ -45,7 +45,7 @@ class Air extends React.Component {
 
     render() {
         return (
-            <div className='round-box' id='air' >
+            <div className='App-child round-box' id='air' >
                 <h1 className='box-header'>Air</h1>
                 <h2 className='box-content'>Air quality index: {this.state.aqi}</h2>
                 <h2 className='box-content'>CO: {this.state.co}</h2>
