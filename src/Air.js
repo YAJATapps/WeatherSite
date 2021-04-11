@@ -23,7 +23,7 @@ class Air extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.lat !== prevProps.lat) {
-            let url = 'http://api.openweathermap.org/data/2.5/air_pollution?lat=' + this.props.lat + '&lon=' + this.props.lon + '&appid=' + Utils.apiKey();
+            let url = 'https://api.openweathermap.org/data/2.5/air_pollution?lat=' + this.props.lat + '&lon=' + this.props.lon + '&appid=' + Utils.apiKey();
 
             fetch(url).then(res => res.json()).then((result) => {
                 this.setState({
