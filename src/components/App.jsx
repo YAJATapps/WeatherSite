@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './../img/logo.png';
 import './../css/App.css';
 import Air from './Air';
@@ -7,7 +7,7 @@ import Wind from './Wind';
 import Utils from './Utils';
 
 // The website header and content
-class App extends React.Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props);
@@ -71,6 +71,5 @@ class App extends React.Component {
       </div>
     );
   }
-}
 
-export default App;
+}

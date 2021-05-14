@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './../css/App.css';
 import './../css/Wind.css';
 
-class Wind extends React.Component {
+export default class Wind extends Component {
 
     // The component that displays wind related data
     constructor(props) {
@@ -62,5 +62,3 @@ class Wind extends React.Component {
     }
 
 }
-
-export default Wind;

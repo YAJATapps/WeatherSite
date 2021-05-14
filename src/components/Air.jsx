@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './../css/App.css';
 import './../css/Air.css';
 import Utils from './Utils';
 
 // The component that displays air related data
-class Air extends React.Component {
+export default class Air extends Component {
 
     constructor(props) {
         super(props);
@@ -99,5 +99,3 @@ class Air extends React.Component {
     }
 
 }
-
-export default Air;

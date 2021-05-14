@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './../css/App.css';
 import './../css/City.css';
 
 // The component that displays city related weather data
-class City extends React.Component {
+export default class City extends Component {
 
     constructor(props) {
         super(props);
@@ -74,5 +74,3 @@ class City extends React.Component {
     }
     
 }
-
-export default City;
