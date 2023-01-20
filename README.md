@@ -1,6 +1,6 @@
 A react app to test weather API.
 
-![Untitled](https://user-images.githubusercontent.com/17001098/112741953-d76e3380-8f3e-11eb-837c-fa24ca6d31af.png)
+![Untitled](screenshots/1.png)
 
 ## Available Scripts
 
